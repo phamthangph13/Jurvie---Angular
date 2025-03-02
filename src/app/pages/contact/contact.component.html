@@ -1,0 +1,60 @@
+<section class="contact-hero">
+  <div class="container">
+    <h1>Liên hệ với chúng tôi</h1>
+    <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
+  </div>
+</section>
+
+<section class="contact-content">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Thông tin liên hệ</h2>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Địa chỉ</h3>
+            <p>123 Đường ABC, Quận XYZ, TP.HCM</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Điện thoại</h3>
+            <p>+84 123 456 789</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>contact&#64;jurvie.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Gửi tin nhắn cho chúng tôi</h2>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" [(ngModel)]="contactForm.name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="contactForm.email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Chủ đề</label>
+            <input type="text" id="subject" [(ngModel)]="contactForm.subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Nội dung</label>
+            <textarea id="message" [(ngModel)]="contactForm.message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Gửi tin nhắn</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
